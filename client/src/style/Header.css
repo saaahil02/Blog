@@ -1,0 +1,118 @@
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+  
+  /* Authentication Buttons */
+  .auth-buttons {
+    margin-left: 20px;
+  }
+  
+  .login-btn,
+  .register-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 7px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover,
+  .register-btn:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Responsive Navbar */
+  .toggle-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: #007bff;
+      padding: 10px 0;
+      text-align: center;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+    }
+  
+    .auth-buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+    }
+  
+    .auth-buttons button {
+      margin: 5px 0;
+    }
+  
+    .toggle-btn {
+      display: block;
+    }
+  }
+  
